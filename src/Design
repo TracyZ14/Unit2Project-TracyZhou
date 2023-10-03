@@ -1,0 +1,30 @@
+LinearEquation class
+Instance variables:
+1. private int xCoord -> x-coordinate.
+2. private int yCoord -> y-coordinate.
+Constructors:
+1. public int xCoord()
+   Use the int indexOf() method to find the index of "(" in the object and store it as the integer variable openParenthesisIndex.
+   Use the int indexOf() method to find the index of "," in the object and store it as the integer variable commaIndex.
+   Use the String substring() method with the parameters of openParenthesisIndex plus 1 and commaIndex to find the string x-coordinate in the object and store it as the String variable xCoordinate.
+   Use the Integer.parseInt() method to convert the string variable xCoordinate and store it as the integer variable xCoord.
+   Return xCoord.
+2. public int yCoord()
+   Use the int indexOf() method to find the index of "," in the object and store it as the integer variable commaIndex.
+   Use the int indexOf() method to find the index of ")" in the object and store it as the integer variable closeParenthesisIndex.
+   Use the String substring() method with the parameters of commaIndex plus 1 and closeParenthesisIndex to find the string y-coordinate in the object and store it as the String variable yCoordinate.
+   Use the Integer.parseInt() method to convert the string variable yCoordinate and store it as the integer variable yCoord.
+   Return yCoord.
+3. public double slope(int x1, int y1, int x2, int y2)
+
+EquationRunner.java
+Step 1: Import the Scanner class.
+Step 2: Create Scanner object.
+Step 3: Ask user to enter the first coordinate point.
+Step 4: Store the input in the String variable coord1.
+Step 5: Use the .xCoord() method on the String variable coord1 and store it as the integer variable coord1x.
+Step 6: Use the .yCoord() method on the String variable coord1 and store it as the integer variable coord1y.
+Step 7: Ask the user to enter the second coordinate point.
+Step 8: Store the input in the String variable coord2.
+Step 9: Use the .xCoord() method on the String variable coord2 and store it as the integer variable coord2x.
+Step 10: Use the .yCoord() method on the String variable coord2 and store it as the integer variable coord2y.
