@@ -48,4 +48,16 @@ public class LinearEquation
         String linearEquation = "y = " + slope + "x + " + yIntercept;
         return linearEquation;
     }
+
+    public double distanceBetweenTwoPoints()
+    {
+        double slope = Math.sqrt(Math.pow(xCoord2 - xCoord1, 2) + Math.pow(yCoord2 - yCoord1, 2));
+        return slope;
+    }
+
+    public double yValue(double slope, int xValue, double yIntercept)
+    {
+        double yValue = (slope * xValue) + yIntercept;
+        return yValue;
+    }
 }
