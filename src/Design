@@ -4,56 +4,62 @@ Instance variables:
 2. private int yCoord1 -> first y-coordinate.
 3. private int xCoord2 -> second x-coordinate.
 4. private int yCoord2 -> second y-coordinate.
+5. private double xValue -> third x-coordinate.
 Constructors:
 1. public LinearEquation(int xCoord1, int yCoord1, int xCoord2, int yCoord2)
-   Initialize the private variables to null.
-2. public int xCoord(String x)
+   Initialize the private integer variables xCoord1, yCoord1, xCoord2, and yCoord2 to the value of the parameters.
+2. public LinearEquation(double xValue)
+   Initialize the private double variable xValue to the value of the parameter and round to the nearest hundredths.
+3. public int xCoord(String x)
    Use the int indexOf() method to find the index of "(" in the object and store it as the integer variable openParenthesisIndex.
    Use the int indexOf() method to find the index of "," in the object and store it as the integer variable commaIndex.
    Use the String substring() method with the parameters of openParenthesisIndex plus 1 and commaIndex to find the string x-coordinate in the object and store it as the String variable xCoordinate.
    Use the Integer.parseInt() method to convert the string variable xCoordinate and store it as the integer variable xCoord.
    Return xCoord.
-3. public int yCoord(String y)
+4. public int yCoord(String y)
    Use the int indexOf() method to find the index of "," in the object and store it as the integer variable commaIndex.
    Use the int indexOf() method to find the index of ")" in the object and store it as the integer variable closeParenthesisIndex.
    Use the String substring() method with the parameters of commaIndex plus 1 and closeParenthesisIndex to find the string y-coordinate in the object and store it as the String variable yCoordinate.
    Use the Integer.parseInt() method to convert the string variable yCoordinate and store it as the integer variable yCoord.
    Return yCoord.
-4. public double slope()
-   Divide the difference of the y-coordinates by the difference of the x-coordinates and store it as the double variable slope.
+5. public double slope()
+   Divide the difference of the y-coordinates by the difference of the x-coordinates, round the answer to the nearest hundredths, and store it as the double variable slope.
    Return slope.
-5. public double y-Intercept(double slope)
-   Divide the y-coordinate by the product of the x-coordinate and the slope and store it as the double variable yIntercept.
+6. public double y-Intercept(double slope)
+   Subtract the y-coordinate by the product of the x-coordinate and the slope, round the answer to the nearest hundredths, and store it as the double variable yIntercept.
    Return yIntercept.
-6. public String calculateLinearEquation(double slope, double yIntercept)
+7. public String calculateLinearEquation(double slope, double yIntercept)
    Concatenate the slope and yIntercept into a string in the slope-Intercept form and store it as the String variable linearEquation.
-7. public double distanceBetweenTwoPoints()
-   Square root the difference of the square of the difference of the x-coordinates and the square of the difference of the y-coordinates and store it as the double variable distanceBetweenTwoPoints.
-8. public double yValue(double slope, integer xValue, double yIntercept)
-   Multiply the slope and xValue and add yIntercept and store it as the double variable yValue.
+8. public double distanceBetweenTwoPoints()
+   Square root the difference of the square of the difference of the x-coordinates and the square of the difference of the y-coordinates, round the answer to the nearest hundredths, and store it as the double variable distanceBetweenTwoPoints.
+9. public double yValue(double slope, integer xValue, double yIntercept)
+   Multiply the slope and xValue and add yIntercept, round the answer to the nearest hundredths, and store it as the double variable yValue.
    Return yValue.
 
 EquationRunner.java
 Step 1: Import the Scanner class.
 Step 2: Create Scanner object.
-Step 3: Ask user to enter the first coordinate point.
-Step 4: Store the input in the String variable coord1.
-Step 5: Use the .xCoord() method on the String variable xCoord1 and store it as the integer variable coord1x.
-Step 6: Use the .yCoord() method on the String variable yCoord1 and store it as the integer variable coord1y.
-Step 7: Ask the user to enter the second coordinate point.
-Step 8: Store the input in the String variable coord2.
-Step 9: Use the .xCoord() method on the String variable xCoord2 and store it as the integer variable coord2x.
-Step 10: Use the .yCoord() method on the String variable yCoord2 and store it as the integer variable coord2y.
-Step 11: Use the LinearEquation() method to store xCoord1, yCoord1, xCoord2, and yCoord2 and store it as the variable coordinates.
-Step 12: Use the .slope() method on the variable coordinates and store it in the double variable slope.
-Step 13: Use the .yIntercept() method with the parameter slope on the variable coordinates and store it in the double variable yIntercept.
-Step 14: Use the .calculateLinearEquation() method on the variable coordinates with the parameters of the double variable slope and the double variable yIntercept and store it as the String variable linearEquation.
-Step 15: Use the System.out.println() method to print out the String variable linearEquation.
-Step 16: Use the System.out.println() method to print out the double variable slope.
-Step 17: Use the System.out.println() method to print out the double variable yIntercept.
-Step 18: Use the System.out.println() method to print out the variable coordinates with the .distanceBetweenTwoPoints() method.
-Step 19: Ask the user to enter the third x-value.
-Step 20: Store the input in the String variable xVal.
-Step 21: Use the Double.parseDouble() method on the String variable xVal and store it as the double variable xValue.
-Step 22: Use the .yValue() method with the parameters slope, xValue, and yIntercept on the double variable xValue and store it as the double variable yValue.
-Step 23: Use the System.out.println() method to print out the double variable xValue and the double variable yValue.
+Step 3: Use the LinearEquation() method to store 0 for all 4 parameters and store it as the variable unknown.
+Step 4: Ask user to enter the first coordinate point.
+Step 5: Store the input in the String variable coord1.
+Step 6: Use the .xCoord() method on the variable unknown and store it as the integer variable coord1x.
+Step 7: Use the .yCoord() method on the variable unknown and store it as the integer variable coord1y.
+Step 8: Ask the user to enter the second coordinate point.
+Step 9: Store the input in the String variable coord2.
+Step 10: Use the .xCoord() method on the variable unknown and store it as the integer variable coord2x.
+Step 11: Use the .yCoord() method on the variable unknown and store it as the integer variable coord2y.
+Step 12: Use the LinearEquation() method to store coord1x, coord1y, coord2x, and coord2y and store it as the variable coordinates.
+Step 13: Use the .slope() method on the variable coordinates and store it in the double variable slope.
+Step 14: Use the .yIntercept() method with the parameter slope on the variable coordinates and store it in the double variable yIntercept.
+Step 15: Use the .calculateLinearEquation() method on the variable coordinates with the parameters of the double variable slope and the double variable yIntercept and store it as the String variable linearEquation.
+Step 16: Use the System.out.println() method to print out the String variable linearEquation.
+Step 17: Use the System.out.println() method to print out the double variable slope.
+Step 18: Use the System.out.println() method to print out the double variable yIntercept.
+Step 19: Use the System.out.println() method to print out the variable coordinates with the .distanceBetweenTwoPoints() method.
+Step 20: Ask the user to enter the third x-value.
+Step 21: Store the input in the String variable xVal.
+Step 22: Use the Double.parseDouble() method on the String variable xVal and store it as the double variable xValue.
+Step 23: Use the LinearEquation() method to store xValue and store it as the variable xCoordinate.
+Step 24: Use the .yValue() method on the variable xCoordinate and store it as the double variable yValue.
+Step 25: Use the System.out.println() method to print out the double variable xValue and the double variable yValue.
+Step 26: Close the Scanner.
