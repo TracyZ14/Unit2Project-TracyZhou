@@ -27,5 +27,6 @@ public class EquationRunner
         LinearEquation xCoordinate = new LinearEquation(xValue);
         double yValue = xCoordinate.yValue(slope, yIntercept);
         System.out.println("Solved coordinate point: (" + xValue + ", " + yValue + ")");
+        s.close();
     }
 }
